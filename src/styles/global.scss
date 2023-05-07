@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --backgroud-primary-color: #0d1018;
+  --background-secondary-color: #282a36;
+  --primary-color: #ffcd4b;
+  --text-color: #a0aec0;
+  --heading-color: #fff;
+  --font-family: "CanelaDeck";
+}
+
+body {
+  background-color: var(--backgroud-primary-color);
+  color: var(--heading-color);
+}

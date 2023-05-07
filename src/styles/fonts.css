@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Black-Trial.otf");
+}
+
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Bold-Trial.otf");
+}
+
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Light-Trial.otf");
+}
+
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Medium-Trial.otf");
+}
+
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Regular-Trial.otf");
+}
+
+@font-face {
+  font-family: "CanelaDeck";
+  src: url("../fonts/CanelaDeck-Thin-Trial.otf");
+  font-weight: 900;
+}
