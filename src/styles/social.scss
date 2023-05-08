@@ -1,0 +1,36 @@
+@import url("./variables.scss");
+
+.icon__container {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.icon__item {
+  width: fit-content;
+  padding: 0.6rem;
+  background-color: var(--primary-color-900);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+@media (min-width: 768px) {
+  .icon__item {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .icon__item {
+    padding: 0.8rem;
+    font-size: 26px;
+  }
+}

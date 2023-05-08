@@ -1,0 +1,35 @@
+---
+import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
+import { FaPenNib } from "react-icons/fa";
+import "../styles/social.scss";
+
+const socials = [
+  {
+    handle: "Twitter",
+    url: "",
+    Icon: AiOutlineTwitter,
+  },
+  {
+    handle: "LinkedIn",
+    url: "",
+    Icon: AiFillLinkedin,
+  },
+  {
+    handle: "Blogs",
+    url: "",
+    Icon: FaPenNib,
+  },
+];
+---
+
+<div class="icon__container">
+  {
+    socials.map(({ Icon, ...rest }) => {
+      return (
+        <div class="icon__item">
+          <Icon />
+        </div>
+      );
+    })
+  }
+</div>
