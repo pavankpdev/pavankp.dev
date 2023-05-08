@@ -1,0 +1,54 @@
+@import url("./variables.scss");
+
+.title-1 {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.title-2 {
+  font-size: 18px;
+}
+
+.title-3 {
+  font-size: 16px;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.font-bold {
+  font-weight: 800;
+}
+
+.font-medium {
+  font-weight: 700;
+}
+
+.font-regular {
+  font-weight: 500;
+}
+
+.font-light {
+  font-weight: 400;
+}
+
+.font-thin {
+  font-weight: 300;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.04em;
+}
+
+.line-height-1 {
+  line-height: 1.4;
+}
+
+.font-lato {
+  font-family: "Lato" !important;
+}
