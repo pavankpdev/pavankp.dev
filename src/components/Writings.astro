@@ -1,0 +1,47 @@
+---
+import axios from "axios";
+import { BsArrowRight } from "react-icons/bs";
+import "../styles/writing.scss";
+const { data } = await axios({
+  method: "GET",
+  url: "https://jsonplaceholder.typicode.com/posts",
+});
+
+console.log(data && data?.slice(0, 4).length);
+---
+
+<div class="container writing__container">
+  <div class="writing__heading">
+    <h2 class="heading-1">My Writings</h2>
+    <p class="text-paragraph font-thin">
+      Exploring the world of technology through engaging and insightful
+      writings.
+    </p>
+  </div>
+  <div class="writing__deck">
+    {
+      data &&
+        data?.slice(0, 4).map((blog: any) => {
+          return (
+            <div class="blog__item">
+              <div class="blog__body">
+                <h2 class="title-2 font-light">{blog?.title}</h2>
+                <p class="paragraph-1">
+                  React is a popular JavaScript library widely used for building
+                  web applications. Whether you are a beginner or an experienced
+                  developer, there is always room for improvement when it comes
+                  to React skills...
+                </p>
+              </div>
+              <div class="blog__footer">
+                <a>
+                  Read More <BsArrowRight />
+                </a>
+                <small>About 10 days</small>
+              </div>
+            </div>
+          );
+        })
+    }
+  </div>
+</div>
