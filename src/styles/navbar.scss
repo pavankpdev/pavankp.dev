@@ -1,6 +1,11 @@
 .navbar {
   padding-left: 1rem;
   padding-top: 1rem;
+
+  .nav__logo__container {
+    cursor: pointer;
+    user-select: none;
+  }
 }
 
 @media (min-width: 1280px) {
