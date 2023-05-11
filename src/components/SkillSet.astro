@@ -1,0 +1,17 @@
+---
+import "../styles/skillset.scss";
+
+const skills = ["NodeJS", "ReactJS", "NestJS", "TypeScript"];
+---
+
+<div class="container skillset__container">
+  <div class="skillset__heading">
+    <h2 class="heading-1">My Skill Set</h2>
+    <p class="text-paragraph font-thin">
+      List of tech/tools I&apos;ve worked with
+    </p>
+  </div>
+  <div class="skillset_deck">
+    {skills.map((skill) => <p class="skill">{skill}</p>)}
+  </div>
+</div>

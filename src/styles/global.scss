@@ -111,6 +111,9 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .lg-hidden {
+    display: none;
+  }
   .container {
     max-width: 900px;
   }
