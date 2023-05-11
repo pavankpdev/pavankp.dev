@@ -1,5 +1,5 @@
-import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai";
-import { FaPenNib } from "react-icons/fa";
+import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai/index";
+import { FaPenNib } from "react-icons/fa/index";
 import "../styles/social.scss";
 
 const SocialIconsDeck = () => {
