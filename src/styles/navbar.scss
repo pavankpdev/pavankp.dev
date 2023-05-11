@@ -1,0 +1,10 @@
+.navbar {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+@media (min-width: 1280px) {
+  .navbar {
+    padding-left: 2rem;
+  }
+}
