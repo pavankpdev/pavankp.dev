@@ -9,3 +9,31 @@
     flex-direction: row-reverse;
   }
 }
+
+@media (min-width: 1024px) {
+  .deck {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .deck {
+    display: grid;
+    grid-template-columns: 65% 35%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .deck {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .deck {
+    display: grid;
+    grid-template-columns: 75% 25%;
+  }
+}

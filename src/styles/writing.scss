@@ -71,3 +71,21 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .writing__deck {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1280px) {
+  .writing__deck {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1920px) {
+  .writing__deck {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

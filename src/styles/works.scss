@@ -94,3 +94,9 @@
     }
   }
 }
+
+@media (min-width: 1920px) {
+  .works__deck {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
