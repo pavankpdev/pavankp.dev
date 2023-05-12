@@ -1,0 +1,51 @@
+---
+import "../styles/books.scss";
+
+const books = [
+  {
+    title: "ReWork",
+    tagline: "Change the Way You Work Forever",
+    link: "https://www.amazon.in/ReWork-Change-Way-Work-Forever/dp/0091929784/ref=sr_1_3?crid=1ZP2UVYPIQTOI&keywords=rework&qid=1683919077&sprefix=rewor%2Caps%2C210&sr=8-3",
+    cover: "https://dbaugbrwob9sy.cloudfront.net/ReWork.jpg",
+  },
+  {
+    title: "The Minimalist Entrepreneur",
+    tagline: "How great founders do more with less",
+    link: "https://www.amazon.in/Minimalist-Entrepreneur-Great-Founders-More/dp/034943140X/ref=sr_1_2?crid=13UQXS4DG0YRR&keywords=The+Minimalist+Entrepreneur&qid=1683919819&sprefix=the+minimalist+entrepreneur%2Caps%2C194&sr=8-2",
+    cover: "https://dbaugbrwob9sy.cloudfront.net/Mnmst_Entpr.jpeg",
+  },
+  {
+    title: "This is Marketing",
+    tagline: "You Can’t Be Seen Until You Learn To See",
+    link: "https://www.amazon.in/This-Marketing-Seth-Godin/dp/0241370140/ref=sr_1_3?crid=1LDSWNYY62G62&keywords=This+is+Marketing&qid=1683919829&sprefix=this+is+marketing%2Caps%2C191&sr=8-3",
+    cover: "https://dbaugbrwob9sy.cloudfront.net/This_is_Marketing.webp",
+  },
+];
+---
+
+<div class="container books__container">
+  <div class="books__heading">
+    <h2 class="heading-1">Books I Recommend</h2>
+    <p class="text-paragraph font-thin">
+      List of books I’ve read and recommend
+    </p>
+  </div>
+  <div class="books__deck">
+    {
+      books.map((book) => (
+        <div class="book">
+          <div class="book__cover">
+            <img src={book.cover} alt={book.title} />
+          </div>
+          <div class="book__title">
+            <h3>{book.title}</h3>
+            <p>{book.tagline}</p>
+          </div>
+          <a href={book.link} target="_blank">
+            View on Amazon
+          </a>
+        </div>
+      ))
+    }
+  </div>
+</div>
