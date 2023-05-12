@@ -1,0 +1,11 @@
+.learning_books_section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .learning_books_section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}

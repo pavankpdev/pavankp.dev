@@ -11,6 +11,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.scss";
 import "../styles/fonts.css";
 import "../styles/typography.scss";
+import "../styles/home.scss";
 ---
 
 <html lang="en">
@@ -36,8 +37,10 @@ import "../styles/typography.scss";
         <SkillSet />
         <Writings />
         <Works />
-        <Learnings />
-        <Books />
+        <div class="learning_books_section">
+          <Learnings />
+          <Books />
+        </div>
       </div>
     </main>
     <Footer />
