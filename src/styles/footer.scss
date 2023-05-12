@@ -29,3 +29,13 @@ footer {
     }
   }
 }
+
+@media (min-width: 768px) {
+  footer {
+    padding: 3rem;
+    .footer__container {
+      flex-direction: row-reverse;
+      justify-content: space-around;
+    }
+  }
+}
