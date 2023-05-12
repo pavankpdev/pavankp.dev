@@ -1,0 +1,56 @@
+---
+import axios from "axios";
+import { AiFillGithub } from "react-icons/ai/index";
+import { BiLinkExternal } from "react-icons/bi/index";
+import { BsArrowRight } from "react-icons/bs/index";
+import "../styles/works.scss";
+const { data } = await axios({
+  method: "GET",
+  url: "https://jsonplaceholder.typicode.com/users",
+});
+---
+
+<div class="container works__container">
+  <div class="works__heading">
+    <h2 class="heading-1">My Works</h2>
+    <p class="text-paragraph font-thin">
+      Showcasing my diverse range of projects and creations in the world of
+      technology.
+    </p>
+  </div>
+  <div class="works__deck">
+    {
+      data &&
+        data?.slice(0, 2).map((blog: any) => {
+          return (
+            <div class="blog__item">
+              <div class="blog__body">
+                <h2 class="title-2 font-light">{blog?.name}</h2>
+                <p class="paragraph-1">
+                  Streamline EVM chain data retrieval with EVMindex - the simple
+                  and powerful indexer with real-time Webhooks.
+                </p>
+              </div>
+              <div class="blog__footer">
+                <div class="blog__links">
+                  <a>
+                    <AiFillGithub />
+                  </a>
+                  <a>
+                    demo
+                    <BiLinkExternal />
+                  </a>
+                </div>
+                <small class="freelance">freelance</small>
+              </div>
+            </div>
+          );
+        })
+    }
+  </div>
+  <div class="loadmore_btn">
+    <a>
+      Load More <BsArrowRight />
+    </a>
+  </div>
+</div>

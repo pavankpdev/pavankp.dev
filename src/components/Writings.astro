@@ -6,8 +6,6 @@ const { data } = await axios({
   method: "GET",
   url: "https://jsonplaceholder.typicode.com/posts",
 });
-
-console.log(data && data?.slice(0, 4).length);
 ---
 
 <div class="container writing__container">
@@ -21,7 +19,7 @@ console.log(data && data?.slice(0, 4).length);
   <div class="writing__deck">
     {
       data &&
-        data?.slice(0, 4).map((blog: any) => {
+        data?.slice(0, 2).map((blog: any) => {
           return (
             <div class="blog__item">
               <div class="blog__body">
@@ -43,5 +41,10 @@ console.log(data && data?.slice(0, 4).length);
           );
         })
     }
+  </div>
+  <div class="loadmore_btn">
+    <a>
+      Load More <BsArrowRight />
+    </a>
   </div>
 </div>

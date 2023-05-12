@@ -105,6 +105,18 @@ a {
   margin: 0 auto;
 }
 
+.loadmore_btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+  }
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 680px;
