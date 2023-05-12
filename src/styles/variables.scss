@@ -6,4 +6,8 @@
   --text-color: #a0aec0;
   --heading-color: #fff;
   --font-family-heading: "CanelaDeck";
+  --secondary-glow: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
