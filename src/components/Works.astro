@@ -4,10 +4,26 @@ import { AiFillGithub } from "react-icons/ai/index";
 import { BiLinkExternal } from "react-icons/bi/index";
 import { BsArrowRight } from "react-icons/bs/index";
 import "../styles/works.scss";
-const { data } = await axios({
-  method: "GET",
-  url: "https://jsonplaceholder.typicode.com/users",
-});
+import { works } from "../data/index";
+
+type WorkTypes = {
+  freelance?: boolean;
+  opensource?: boolean;
+  sideProject?: boolean;
+};
+const getWorkTypeClass = (type: WorkTypes) => {
+  if (type?.freelance) {
+    return "freelance";
+  }
+
+  if (type?.opensource) {
+    return "opensource";
+  }
+
+  if (type?.sideProject) {
+    return "SideProject";
+  }
+};
 ---
 
 <div class="container works__container">
@@ -20,28 +36,32 @@ const { data } = await axios({
   </div>
   <div class="works__deck">
     {
-      data &&
-        data?.slice(0, 2).map((blog: any) => {
+      works &&
+        works?.slice(0, 4).map((work: any) => {
           return (
             <div class="blog__item">
               <div class="blog__body">
-                <h2 class="title-2 font-light">{blog?.name}</h2>
-                <p class="paragraph-1">
-                  Streamline EVM chain data retrieval with EVMindex - the simple
-                  and powerful indexer with real-time Webhooks.
-                </p>
+                <h2 class="title-2 font-light">{work?.title}</h2>
+                <p class="paragraph-1">{work?.description}</p>
               </div>
               <div class="blog__footer">
                 <div class="blog__links">
-                  <a>
-                    <AiFillGithub />
-                  </a>
-                  <a>
-                    demo
-                    <BiLinkExternal />
-                  </a>
+                  {work?.repo && (
+                    <a href={work?.repo} target="_blank">
+                      <AiFillGithub />
+                    </a>
+                  )}
+
+                  {work?.url && (
+                    <a href={work?.url} target="_blank">
+                      demo
+                      <BiLinkExternal />
+                    </a>
+                  )}
                 </div>
-                <small class="freelance">freelance</small>
+                <small class={getWorkTypeClass(work)}>
+                  {getWorkTypeClass(work)}
+                </small>
               </div>
             </div>
           );
@@ -49,7 +69,7 @@ const { data } = await axios({
     }
   </div>
   <div class="loadmore_btn">
-    <a>
+    <a href="https://github.com/pavankpdev" target="_blank">
       Load More <BsArrowRight />
     </a>
   </div>

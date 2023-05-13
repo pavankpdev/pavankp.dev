@@ -24,3 +24,35 @@ export const writings = [
     url: "https://blogs.pavankp.dev/does-re-rendering-in-react-affect-performance",
   },
 ];
+
+export const works = [
+  {
+    id: 1,
+    title: "EVMIndex",
+    description: `Streamline EVM chain data retrieval with EVMindex - the simple and powerful indexer with real-time Webhooks.`,
+    url: "https://evmindex.dev",
+    repo: "https://github.com/pavankpdev/EVMIndex",
+    opensource: true,
+  },
+  {
+    id: 2,
+    title: "DocMySol",
+    description: `Docmysol is a user-friendly solution for creating Solidity documents with just one click.`,
+    url: "https://docmysol.com/",
+    sideProject: true,
+  },
+  {
+    id: 3,
+    title: "SicaPay",
+    description: `Fight Climate Change And Earn Rewards With SICA. A Digital Currency Backed By Real Carbon Assets.`,
+    url: "https://app.sicapay.io/auth/login",
+    freelance: true,
+  },
+  {
+    id: 4,
+    title: "ArtPlace",
+    description: `An open-source exclusive NFT marketplace that connects artists with collectors, providing a platform for unique and rare digital art ownership.`,
+    repo: "https://github.com/DuolearnHQ/ArtPlace",
+    opensource: true,
+  },
+];
