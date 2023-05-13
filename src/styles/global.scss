@@ -210,10 +210,108 @@ a {
   .lg-glow::before {
     background: #ff377f;
     border-radius: 50%;
+    width: 200px;
+    height: 138px;
+    opacity: 0.6;
+  }
+
+  .lg-glow::after {
+    background: #ff377f;
+    width: 138px;
+    height: 138px;
+    z-index: -12;
+    opacity: 0.6;
+  }
+
+  .lg-glow::before,
+  .lg-glow::after {
+    content: "";
+    right: 12%;
+    top: 0;
+    position: fixed;
+    opacity: 0.6;
+    filter: blur(232.5px);
+    transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
+  }
+
+  .lg-glow-2 {
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+  }
+
+  .lg-glow-2::before {
+    background: rgba(151, 71, 255, 0.8);
+    border-radius: 50%;
+    width: 200px;
+    height: 180px;
+    opacity: 0.8;
+  }
+
+  .lg-glow-2::after {
+    background: rgba(151, 71, 255, 0.8);
+    width: 200px;
+    height: 180px;
+    z-index: -1;
+    opacity: 0.8;
+  }
+
+  .lg-glow-2::before,
+  .lg-glow-2::after {
+    content: "";
+    right: 2%;
+    top: 25%;
+    position: fixed;
+    filter: blur(232.5px);
+    transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
+    opacity: 0.8;
+  }
+
+  .mb-glow {
+    display: none;
+  }
+  .sm-hidden {
+    display: block;
+  }
+  .lg-hidden {
+    display: none;
+  }
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .lg-glow {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+  }
+
+  .lg-glow::before {
+    background: #ff377f;
+    border-radius: 50%;
     width: 338px;
     height: 338px;
     margin-left: -400px;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .lg-glow::after {
@@ -221,7 +319,7 @@ a {
     width: 338px;
     height: 338px;
     z-index: -12;
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .lg-glow::before,
@@ -232,7 +330,7 @@ a {
     position: fixed;
     filter: blur(232.5px);
     transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
-    opacity: 0.4;
+    opacity: 0.3;
   }
 
   .lg-glow-2 {
@@ -267,37 +365,6 @@ a {
     filter: blur(232.5px);
     transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
     opacity: 0.4;
-  }
-
-  .mb-glow {
-    display: none;
-  }
-  .sm-hidden {
-    display: block;
-  }
-  .lg-hidden {
-    display: none;
-  }
-  .container {
-    max-width: 900px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1100px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    max-width: 1400px;
   }
 }
 

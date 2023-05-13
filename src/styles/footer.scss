@@ -2,9 +2,9 @@
 
 footer {
   background-color: var(--background-secondary-color);
-  padding: 1rem 0;
-
   .footer__container {
+    padding: 2rem 1rem;
+
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
@@ -32,10 +32,22 @@ footer {
 
 @media (min-width: 768px) {
   footer {
-    padding: 3rem;
+    border-radius: 20px 20px 0 0;
+    margin-top: 2rem;
     .footer__container {
+      padding: 3rem;
       flex-direction: row-reverse;
       justify-content: space-around;
     }
+  }
+}
+
+@media (min-width: 1024px) {
+  footer {
+    border-radius: 20px 20px 0 0;
+    margin-top: 2rem;
+  }
+  .footer__container {
+    padding: 3rem;
   }
 }

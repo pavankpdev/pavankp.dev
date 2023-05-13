@@ -1,5 +1,5 @@
 import { AiOutlineTwitter, AiFillLinkedin } from "react-icons/ai/index";
-import { FaPenNib } from "react-icons/fa/index";
+import { FaPenNib, FaGithub } from "react-icons/fa/index";
 import "../styles/social.scss";
 
 const SocialIconsDeck = () => {
@@ -18,6 +18,11 @@ const SocialIconsDeck = () => {
       handle: "Blogs",
       url: "https://blogs.pavankp.dev/",
       Icon: FaPenNib,
+    },
+    {
+      handle: "GitHub",
+      url: "https://github.com/pavankpdev",
+      Icon: FaGithub,
     },
   ];
 
