@@ -189,6 +189,10 @@ a {
   opacity: 0.1;
 }
 
+.lg-glow {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 680px;
@@ -196,6 +200,75 @@ a {
 }
 
 @media (min-width: 1024px) {
+  .lg-glow {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+  }
+
+  .lg-glow::before {
+    background: #ff377f;
+    border-radius: 50%;
+    width: 338px;
+    height: 338px;
+    margin-left: -400px;
+    opacity: 0.4;
+  }
+
+  .lg-glow::after {
+    background: #ff377f;
+    width: 338px;
+    height: 338px;
+    z-index: -12;
+    opacity: 0.4;
+  }
+
+  .lg-glow::before,
+  .lg-glow::after {
+    content: "";
+    right: 10%;
+    top: 0;
+    position: fixed;
+    filter: blur(232.5px);
+    transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
+    opacity: 0.4;
+  }
+
+  .lg-glow-2 {
+    position: fixed;
+    width: 100%;
+    z-index: -100;
+  }
+
+  .lg-glow-2::before {
+    background: rgba(151, 71, 255, 0.8);
+    border-radius: 50%;
+    width: 338px;
+    height: 338px;
+    margin-left: -400px;
+    opacity: 0.4;
+  }
+
+  .lg-glow-2::after {
+    background: rgba(151, 71, 255, 0.8);
+    width: 338px;
+    height: 338px;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .lg-glow-2::before,
+  .lg-glow-2::after {
+    content: "";
+    right: 2%;
+    top: 25%;
+    position: fixed;
+    filter: blur(232.5px);
+    transform: matrix(0.95, -0.31, -0.31, -0.95, 0, 0);
+    opacity: 0.4;
+  }
+
   .mb-glow {
     display: none;
   }
@@ -224,12 +297,12 @@ a {
 
 @media (min-width: 1920px) {
   .container {
-    max-width: 1500px;
+    max-width: 1400px;
   }
 }
 
 @media (min-width: 2560px) {
   .container {
-    max-width: 1800px;
+    max-width: 1500px;
   }
 }
