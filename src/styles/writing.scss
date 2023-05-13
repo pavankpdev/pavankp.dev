@@ -34,8 +34,12 @@
       gap: 0.3rem;
       p {
         color: #a0aec0;
-        line-height: 16px;
+        line-height: 18px;
         font-weight: 400;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
       }
     }
 
