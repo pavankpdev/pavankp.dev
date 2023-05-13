@@ -56,3 +56,24 @@ export const works = [
     opensource: true,
   },
 ];
+
+export const skills = [
+  "NodeJS",
+  "ReactJS",
+  "NestJS",
+  "TypeScript",
+  "GraphQL",
+  "NextJS",
+  "AWS",
+  "Solidity",
+  "HardHat",
+  "ether.js",
+  "MongoDB",
+  "Postgress",
+  "Prisma",
+  "Docker",
+  "DevOps",
+  "Ethereum",
+  "Polygon",
+  "Serverless",
+];
