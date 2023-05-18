@@ -80,6 +80,10 @@ export const skills = [
 
 export const lessons = [
   {
+    lesson: "Qwik",
+    onGoing: true,
+  },
+  {
     lesson: "Rust",
     onGoing: true,
   },
