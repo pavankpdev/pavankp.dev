@@ -13,15 +13,15 @@ export const writings = [
   },
   {
     id: 3,
-    title: "Co-Locating State: Learn to Optimize React Apps without Memo",
-    description: `As the application grows, React states become more widespread. Poorly organized states can cause excessive re-rendering and hinder performance. To address this problem, React developers often resort to optimizing it using memoization without thoroughly exa...`,
-    url: "https://blogs.pavankp.dev/co-locating-state-learn-to-optimize-react-apps-without-memo",
+    title: "Stop setting goals, create milestones instead",
+    description: `The goals, dreams, missions, and whatnot, we've been in this cycle since childhood. Recently, I had an eye-opening realization that many of the goals we set are often naive and lack the necessary depth to guide us on our journey...`,
+    url: "https://blogs.pavankp.dev/stop-setting-goals-create-milestones-instead"
   },
   {
     id: 4,
-    title: "Does Re-rendering in React Affect Performance",
-    description: `A significant amount of time is often spent trying to optimize a React app. Though optimization is a crucial phase in software development, it can go too far. Let's discuss Re-renders in React today and whether they impact performance...`,
-    url: "https://blogs.pavankp.dev/does-re-rendering-in-react-affect-performance",
+    title: "Co-Locating State: Learn to Optimize React Apps without Memo",
+    description: `As the application grows, React states become more widespread. Poorly organized states can cause excessive re-rendering and hinder performance. To address this problem, React developers often resort to optimizing it using memoization without thoroughly exa...`,
+    url: "https://blogs.pavankp.dev/co-locating-state-learn-to-optimize-react-apps-without-memo",
   },
 ];
 
