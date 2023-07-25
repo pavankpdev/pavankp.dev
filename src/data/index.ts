@@ -120,4 +120,10 @@ export const books = [
     link: "https://www.amazon.in/This-Marketing-Seth-Godin/dp/0241370140/ref=sr_1_3?crid=1LDSWNYY62G62&keywords=This+is+Marketing&qid=1683919829&sprefix=this+is+marketing%2Caps%2C191&sr=8-3",
     cover: "https://dbaugbrwob9sy.cloudfront.net/This_is_Marketing.webp",
   },
+  {
+    title: "14 Habits of Highly Productive Developers",
+    tagline: "By Zeno Rocha",
+    link: "https://www.amazon.in/gp/product/1735266531/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1",
+    cover: "https://m.media-amazon.com/images/I/41xkBxCL26L._SX289_BO1,204,203,200_.jpg",
+  },
 ];
