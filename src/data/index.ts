@@ -80,23 +80,19 @@ export const skills = [
 
 export const lessons = [
   {
-    lesson: "Qwik",
+    lesson: "Golang",
     onGoing: true,
   },
   {
-    lesson: "Rust",
-    onGoing: true,
-  },
-  {
-    lesson: "Pulumi",
+    lesson: "AMPQ",
     onGoing: false,
   },
   {
-    lesson: "Adv Solidity",
+    lesson: "Account Abstraction",
     onGoing: false,
   },
   {
-    lesson: "Chainlink Oracles",
+    lesson: "MPC",
     onGoing: false,
   },
 ];
