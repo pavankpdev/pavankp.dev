@@ -84,11 +84,11 @@ export const lessons = [
     onGoing: true,
   },
   {
-    lesson: "AMPQ",
-    onGoing: false,
+    lesson: "Account Abstraction",
+    onGoing: true,
   },
   {
-    lesson: "Account Abstraction",
+    lesson: "AMPQ",
     onGoing: false,
   },
   {
