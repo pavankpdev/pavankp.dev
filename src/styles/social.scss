@@ -4,6 +4,7 @@
   display: flex;
   gap: 0.5rem;
   margin-top: 0.5rem;
+  align-items: center;
 }
 
 .icon__item {
@@ -22,9 +23,21 @@
   transition: all 0.3s linear;
 }
 
+.view__resume__btn {
+  border-radius: 10px;
+  font-size: 10px;
+  letter-spacing: 2;
+
+}
+
 @media (min-width: 768px) {
   .icon__item {
     font-size: 22px;
+  }
+
+  .view__resume__btn {
+    font-size: 15px;
+    letter-spacing: 2;
   }
 }
 
@@ -32,5 +45,11 @@
   .icon__item {
     padding: 0.8rem;
     font-size: 26px;
+  }
+
+  .view__resume__btn {
+    font-size: 20px;
+    letter-spacing: 2;
+
   }
 }

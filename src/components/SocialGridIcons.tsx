@@ -36,6 +36,13 @@ const SocialIconsDeck = () => {
             </a>
           );
         })}
+        <a 
+        className="icon__item view__resume__btn"
+         href={`https://dbaugbrwob9sy.cloudfront.net/Pavan's+Resume+v1.pdf`} 
+         target="_blank"
+         >
+            View Resume
+        </a>
       </div>
     </>
   );
