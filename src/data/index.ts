@@ -122,4 +122,10 @@ export const books = [
     link: "https://www.amazon.in/gp/product/1735266531/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1",
     cover: "https://m.media-amazon.com/images/I/41xkBxCL26L._SX289_BO1,204,203,200_.jpg",
   },
+  {
+    title: "The Compound Effect",
+    tagline: "Darren Hardy",
+    link: "https://www.amazon.in/Compound-Effect-Darren-Hardy/dp/9390924634",
+    cover: "https://m.media-amazon.com/images/I/71nAPgrH3aL._SY466_.jpg",
+  },
 ];
