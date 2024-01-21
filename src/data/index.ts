@@ -124,8 +124,14 @@ export const books = [
   },
   {
     title: "The Compound Effect",
-    tagline: "Darren Hardy",
+    tagline: "By Darren Hardy",
     link: "https://www.amazon.in/Compound-Effect-Darren-Hardy/dp/9390924634",
     cover: "https://m.media-amazon.com/images/I/71nAPgrH3aL._SY466_.jpg",
+  },
+  {
+    title: "The 5 AM Club",
+    tagline: "Own your morning, Elevate your life",
+    link: "https://amzn.eu/d/h61uxvs",
+    cover: "https://m.media-amazon.com/images/I/618ZOX7UNNL._SY522_.jpg",
   },
 ];
