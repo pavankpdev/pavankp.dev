@@ -129,6 +129,12 @@ export const books = [
     cover: "https://m.media-amazon.com/images/I/71nAPgrH3aL._SY466_.jpg",
   },
   {
+    title: "The PARA Method",
+    tagline: "Simplify, Organise and Master Your Digital Life",
+    link: "https://amzn.eu/d/7p5sZu9",
+    cover: "https://m.media-amazon.com/images/I/61n2ppUc1AL._SY522_.jpg",
+  },
+  {
     title: "The 5 AM Club",
     tagline: "Own your morning, Elevate your life",
     link: "https://amzn.eu/d/h61uxvs",
