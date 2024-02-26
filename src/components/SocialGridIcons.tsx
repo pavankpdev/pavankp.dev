@@ -38,7 +38,7 @@ const SocialIconsDeck = () => {
         })}
         <a 
         className="icon__item view__resume__btn"
-         href={`https://dbaugbrwob9sy.cloudfront.net/Pavan's+Resume+v2.pdf`} 
+         href={`https://pavan-public.s3.ap-south-1.amazonaws.com/Pavan's+Resume.pdf`} 
          target="_blank"
          >
             View Resume
