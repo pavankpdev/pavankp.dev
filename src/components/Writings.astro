@@ -3,6 +3,10 @@ import axios from "axios";
 import { BsArrowRight } from "react-icons/bs/index";
 import "../styles/writing.scss";
 import { writings } from "../data/index";
+import { getBlogs } from "../helpers/getBlogsViaRss";
+
+const blogs = await getBlogs();
+
 ---
 
 <div class="container writing__container">
@@ -15,16 +19,15 @@ import { writings } from "../data/index";
   </div>
   <div class="writing__deck">
     {
-      writings &&
-        writings?.slice(0, 4).map((blog: any) => {
+      blogs &&
+      blogs.items?.slice(0, 4).map((blog: any) => {
           return (
             <div class="blog__item">
               <div class="blog__body">
                 <h2 class="title-2 font-light">{blog?.title}</h2>
-                <p class="paragraph-1">{blog.description}</p>
               </div>
               <div class="blog__footer">
-                <a href={blog.url} target="_blank">
+                <a href={blog.link} target="_blank">
                   Read More <BsArrowRight />
                 </a>
               </div>
