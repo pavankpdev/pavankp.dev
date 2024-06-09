@@ -84,16 +84,16 @@ export const lessons = [
     onGoing: true,
   },
   {
-    lesson: "Account Abstraction",
+    lesson: "Kubernetes",
     onGoing: true,
   },
   {
-    lesson: "AMPQ",
-    onGoing: false,
+    lesson: "Design Patterns",
+    onGoing: true,
   },
   {
-    lesson: "MPC",
-    onGoing: false,
+    lesson: "Infra lessons",
+    onGoing: true,
   },
 ];
 
