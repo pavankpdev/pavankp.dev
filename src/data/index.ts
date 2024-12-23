@@ -84,7 +84,7 @@ export const lessons = [
     onGoing: true,
   },
   {
-    lesson: "Kubernetes",
+    lesson: "DiD",
     onGoing: true,
   },
   {
