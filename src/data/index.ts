@@ -1,24 +1,24 @@
 export const writings = [
   {
-    id: 1,
-    title: "The Ultimate Deep Dive into React Server Components (Revised)",
-    description: `React Server Components have been something that's been bugging me for a while now. There's been a lot of debate online, and a lot of comparisons have made it really hard to understand what exactly it is and how it works. But now, after doing some re...`,
-    url: "https://blogs.pavankp.dev/the-ultimate-deep-dive-into-react-server-components-revised",
+    id: 4,
+    title: "x402: The Internet’s Missing Payment Layer",
+    description: `x402 is a payment standard designed to make the internet feel like it finally has its own built in payment layer...`,
+    url: "https://blockcritics.com/x402-the-internets-missing-payment-layer/",
   },
   {
-    id: 2,
+    id: 3,
     title: "Become a React Pro: Top 10 Tips for Improving Your Skills",
     description: `React is a popular JavaScript library widely used for building web applications. Whether you are a beginner or an experienced developer, there is always room for improvement when it comes to React skills...`,
     url: "https://blogs.pavankp.dev/become-a-react-pro-top-10-tips-for-improving-your-skills",
   },
   {
-    id: 3,
+    id: 2,
     title: "Stop setting goals, create milestones instead",
     description: `The goals, dreams, missions, and whatnot, we've been in this cycle since childhood. Recently, I had an eye-opening realization that many of the goals we set are often naive and lack the necessary depth to guide us on our journey...`,
     url: "https://blogs.pavankp.dev/stop-setting-goals-create-milestones-instead"
   },
   {
-    id: 4,
+    id: 1,
     title: "Co-Locating State: Learn to Optimize React Apps without Memo",
     description: `As the application grows, React states become more widespread. Poorly organized states can cause excessive re-rendering and hinder performance. To address this problem, React developers often resort to optimizing it using memoization without thoroughly exa...`,
     url: "https://blogs.pavankp.dev/co-locating-state-learn-to-optimize-react-apps-without-memo",
