@@ -11,7 +11,7 @@ export default function ExperienceSection() {
         subtitle="Professional experience and career milestones."
       />
 
-      <div className="relative border-l border-white/10 ml-3 md:ml-6 space-y-12">
+      <div className="relative border-l border-white/10 ml-3 md:ml-6 space-y-12 overflow-hidden">
         {EXPERIENCE.map((exp, idx) => (
           <motion.div
             key={exp.id}
@@ -24,7 +24,7 @@ export default function ExperienceSection() {
             <div className="absolute -left-[5px] top-2 w-2.5 h-2.5 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(34,211,238,0.8)]" />
 
             <div className="flex flex-col md:flex-row gap-4 md:items-center mb-2">
-              <h3 className="text-2xl font-bold text-white font-orbitron">
+              <h3 className="text-xl md:text-2xl font-bold text-white font-orbitron break-words">
                 {exp.role}
               </h3>
               <span className="hidden md:block text-neutral-600">/</span>
