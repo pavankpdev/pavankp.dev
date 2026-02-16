@@ -382,3 +382,41 @@
   max-width: 100%;
   height: auto;
 }
+
+/* Share buttons */
+.share-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.share-btn > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+  color: #a3a3a3;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.share-btn > a:hover {
+  color: #22d3ee;
+  border-color: rgba(34, 211, 238, 0.4);
+  background: rgba(34, 211, 238, 0.06);
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.08);
+}
+
+.share-btn > a:active {
+  transform: scale(0.97);
+}
+
+.share-btn > a svg {
+  flex-shrink: 0;
+}
