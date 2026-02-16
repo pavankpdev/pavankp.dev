@@ -32,37 +32,72 @@ export const SKILLS: SkillGroup[] = [
 export const EXPERIENCE: Experience[] = [
   {
     id: 1,
-    role: "Full Stack & Blockchain Developer",
+    role: "Senior Full Stack Developer",
     company: "HeimLabs",
-    duration: "2023 - Present",
-    description: "Building blockchain solutions and full-stack platforms at a trusted blockchain solutions provider.",
+    duration: "Sep 2025 - Present",
+    description: "Building AI-driven products and agentic systems for next-gen financial platforms.",
     impact: [
-      "Developing and shipping decentralized applications on Ethereum and Polygon networks.",
-      "Building full-stack platforms using React, TypeScript, NestJS, and GraphQL.",
-      "Leading development of EVMIndex — an open-source EVM chain data indexer with real-time Webhooks."
+      "Developing agentic AI experiences that autonomously reason, plan, and execute complex workflows.",
+      "Building an AI-powered wealth management solution spanning perps trading and prediction markets, leveraging the x402 payment protocol."
     ]
   },
   {
     id: 2,
-    role: "Technical Program Manager & Blockchain Consultant",
-    company: "NonceBlox",
-    duration: "2022 - 2023",
-    description: "Managed blockchain programs and provided technical consulting for Web3 projects.",
+    role: "Senior Software Developer",
+    company: "Fidociary",
+    duration: "Jan 2025 - Aug 2025",
+    description: "Led end-to-end product development driving the company's core vision and technical roadmap.",
     impact: [
-      "Served as Technical Program Manager, Blockchain Consultant, and Solidity Engineer.",
-      "Led hiring and technical evaluation for Solana developer positions.",
-      "Consulted on smart contract architecture using Solidity, HardHat, and ethers.js."
+      "Spearheaded the BETA launch at Dubai FinTech Summit, gaining early adopters and raising awareness about trustless identity and decentralized compliance.",
+      "Designed and developed a decentralized identity (DiD) platform with reusable KYC solutions, empowering users with data ownership and enabling privacy-preserving verification via ZK proofs."
     ]
   },
   {
     id: 3,
-    role: "Co-Founder",
-    company: "Duolearn",
-    duration: "2021 - Present",
-    description: "Co-founded a gamified learning platform to help aspiring developers succeed in tech.",
+    role: "Senior Full Stack Developer",
+    company: "LanceSoft India (Client: Bosch)",
+    duration: "Mar 2024 - Dec 2024",
+    description: "Contributing to the Decarbonisation Index (DKI) for Porsche, building a tool to visualize carbon emissions across the Volkswagen group.",
     impact: [
-      "Built and launched duolearn.tech — a gamified platform with MERN stack, Redux, and GraphQL.",
-      "Designed the learning experience and curriculum for web development and blockchain tracks.",
+      "Leveraging Angular, AWS Lambdas, and Terraform CDK to build a scalable, serverless architecture.",
+      "Building a system to visualize and handle a large dataset with over 300K+ rows to provide comprehensive insights into vehicle emissions.",
+      "Supporting Volkswagen's sustainability initiatives by aiding strategic planning and efforts to reduce carbon footprints."
+    ]
+  },
+  {
+    id: 4,
+    role: "Technical Manager",
+    company: "Nonceblox",
+    duration: "Jan 2023 - Jan 2024",
+    description: "Led blockchain projects and managed a team of 5-6 professionals.",
+    impact: [
+      "Led the project to tokenize real-world assets, enhancing liquidity and fostering innovation in the blockchain space.",
+      "Actively developed a metaverse aggregator with a focus on games and PFP NFTs, contributing to the growth of the virtual world ecosystem.",
+      "Led a team of 5-6 professionals, ensuring effective collaboration and successful project execution."
+    ]
+  },
+  {
+    id: 5,
+    role: "Full Stack Developer",
+    company: "Nonceblox",
+    duration: "Aug 2021 - Jan 2023",
+    description: "Led high-profile Web3 projects, orchestrated a layer 1 Blockchain, and managed associated applications.",
+    impact: [
+      "Demonstrated proficiency with AWS services like SES, SQS, and Lambdas, optimizing cloud-based solutions.",
+      "Actively involved in Solidity smart contract development, audits, and created innovative DApps using MERN and Hardhat.",
+      "Architected a robust waitlisting system to efficiently handle surges in requests for a limited NFT minting DApp.",
+      "Led the creation of a node provider system using Kubernetes and Docker."
+    ]
+  },
+  {
+    id: 6,
+    role: "Full Stack Developer",
+    company: "DevTown",
+    duration: "Feb 2021 - Aug 2021",
+    description: "Built and maintained the DevTown Smart Edtech platform for students and administrators.",
+    impact: [
+      "Utilized MERN and GraphQL to create a robust and efficient platform with progress tracking and analytics.",
+      "Successfully delivered the MVP platform within an impressive 30-day timeframe."
     ]
   }
 ];
