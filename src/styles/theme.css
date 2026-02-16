@@ -202,11 +202,181 @@
 
 .clip-path-slant {
   clip-path: polygon(
-    15px 0, 
-    100% 0, 
-    100% calc(100% - 15px), 
-    calc(100% - 15px) 100%, 
-    0 100%, 
+    15px 0,
+    100% 0,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    0 100%,
     0 15px
   );
+}
+
+/* ─── Blog Prose — Cyberpunk Typography ─── */
+
+.blog-prose {
+  --tw-prose-body: #d4d4d4;
+  --tw-prose-headings: #ecfeff;
+  --tw-prose-links: #22d3ee;
+  --tw-prose-bold: #e5e5e5;
+  --tw-prose-code: #e879f9;
+  --tw-prose-quotes: #a3a3a3;
+  --tw-prose-quote-borders: #22d3ee;
+}
+
+/* Headings */
+.blog-prose :where(h1, h2, h3, h4) {
+  font-family: "Orbitron", sans-serif;
+  color: #ecfeff;
+  letter-spacing: 0.02em;
+}
+
+.blog-prose :where(h2) {
+  margin-top: 2.5em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Links */
+.blog-prose :where(a) {
+  color: #22d3ee;
+  text-decoration: underline;
+  text-decoration-color: rgba(34, 211, 238, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s;
+}
+.blog-prose :where(a:hover) {
+  text-decoration-color: #22d3ee;
+}
+
+/* Inline code */
+.blog-prose :where(:not(pre) > code) {
+  font-family: "JetBrains Mono", monospace;
+  color: #e879f9;
+  background: rgba(232, 121, 249, 0.08);
+  border: 1px solid rgba(232, 121, 249, 0.15);
+  border-radius: 0.3em;
+  padding: 0.15em 0.4em;
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+/* Code blocks (Shiki-rendered) */
+.blog-prose :where(pre) {
+  background: #0c0a09 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  overflow-x: auto;
+  position: relative;
+}
+
+.blog-prose :where(pre)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.3), transparent);
+}
+
+.blog-prose :where(pre code) {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: inherit;
+}
+
+/* Blockquotes */
+.blog-prose :where(blockquote) {
+  border-left: 3px solid #22d3ee;
+  background: rgba(34, 211, 238, 0.04);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 1rem 1.25rem;
+  font-style: normal;
+  color: #a3a3a3;
+}
+
+.blog-prose :where(blockquote p:first-of-type)::before,
+.blog-prose :where(blockquote p:last-of-type)::after {
+  content: none;
+}
+
+/* Tables */
+.blog-prose :where(table) {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.blog-prose :where(thead) {
+  border-bottom: 2px solid rgba(34, 211, 238, 0.3);
+}
+
+.blog-prose :where(thead th) {
+  color: #22d3ee;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  background: rgba(34, 211, 238, 0.04);
+}
+
+.blog-prose :where(tbody tr) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.15s;
+}
+
+.blog-prose :where(tbody tr:hover) {
+  background: rgba(34, 211, 238, 0.03);
+}
+
+.blog-prose :where(tbody td) {
+  padding: 0.75rem 1rem;
+  color: #d4d4d4;
+}
+
+/* Lists */
+.blog-prose :where(ul > li)::marker {
+  color: #22d3ee;
+}
+
+.blog-prose :where(ol > li)::marker {
+  color: #22d3ee;
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Strong */
+.blog-prose :where(strong) {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+/* Horizontal rules */
+.blog-prose :where(hr) {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.3), transparent);
+  margin: 3rem 0;
+}
+
+/* Mermaid diagram containers */
+.mermaid-diagram {
+  background: rgba(12, 10, 9, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
 }

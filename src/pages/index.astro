@@ -4,13 +4,17 @@ import HeroSection from '../components/HeroSection';
 import SkillsSection from '../components/SkillsSection';
 import ExperienceSection from '../components/ExperienceSection';
 import WritingsPreview from '../components/WritingsPreview';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const postsMeta = posts.map((p) => ({ id: p.id, ...p.data }));
 ---
 
 <Layout title="Pavan Kumar - Full Stack & Web3 Developer">
-  <div class="space-y-24 pb-12" transition:animate="fade">
+  <div class="space-y-32 md:space-y-40 pb-12" transition:animate="fade">
     <HeroSection client:load />
     <SkillsSection client:visible />
     <ExperienceSection client:visible />
-    <WritingsPreview client:visible />
+    <WritingsPreview posts={postsMeta} client:visible />
   </div>
 </Layout>

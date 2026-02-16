@@ -2,9 +2,13 @@ import { ChevronRight, Clock } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { CardSpotlight } from "./ui/card-spotlight";
 import Button from "./Button";
-import { BLOG_POSTS } from "../data";
+import type { BlogPostMeta } from "../data";
 
-export default function WritingsPreview() {
+interface Props {
+  posts: BlogPostMeta[];
+}
+
+export default function WritingsPreview({ posts }: Props) {
   return (
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="mb-12">
@@ -18,7 +22,7 @@ export default function WritingsPreview() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {BLOG_POSTS.slice(0, 2).map((post) => (
+        {posts.slice(0, 2).map((post) => (
           <a
             key={post.id}
             href={`/blog/${post.id}`}

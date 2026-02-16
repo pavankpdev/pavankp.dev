@@ -1,10 +1,14 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import BlogList from '../../components/BlogList';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+const postsMeta = posts.map((p) => ({ id: p.id, ...p.data }));
 ---
 
 <Layout title="Blog - Pavan Kumar">
   <div transition:animate="fade">
-    <BlogList client:load />
+    <BlogList posts={postsMeta} client:load />
   </div>
 </Layout>

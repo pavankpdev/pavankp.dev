@@ -3,15 +3,19 @@ import { motion } from "motion/react";
 import { Search, ChevronRight, Calendar, Clock } from "lucide-react";
 import { ImageWithFallback } from "./ImageWithFallback";
 import { CardSpotlight } from "./ui/card-spotlight";
-import { BLOG_POSTS } from "../data";
+import type { BlogPostMeta } from "../data";
 
-export default function BlogList() {
+interface Props {
+  posts: BlogPostMeta[];
+}
+
+export default function BlogList({ posts }: Props) {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  const allTags = Array.from(new Set(BLOG_POSTS.flatMap((post) => post.tags)));
+  const allTags = Array.from(new Set(posts.flatMap((post) => post.tags)));
 
-  const filteredPosts = BLOG_POSTS.filter((post) => {
+  const filteredPosts = posts.filter((post) => {
     const matchesSearch =
       post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());

@@ -7,4 +7,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  markdown: {
+    shikiConfig: {
+      theme: 'tokyo-night',
+      wrap: true,
+    },
+  },
 });
