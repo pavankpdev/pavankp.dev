@@ -1,102 +1,16 @@
 ---
-import Hero from "../components/Hero.astro";
-import Navbar from "../components/Navbar.astro";
-import SkillSet from "../components/SkillSet.astro";
-import Writings from "../components/Writings.astro";
-import Works from "../components/Works.astro";
-import Learnings from "../components/Learnings.astro";
-import Books from "../components/Books.astro";
-import Footer from "../components/Footer.astro";
-
-import "../styles/global.scss";
-import "../styles/fonts.css";
-import "../styles/typography.scss";
-import "../styles/home.scss";
+import Layout from '../layouts/Layout.astro';
+import HeroSection from '../components/HeroSection';
+import SkillsSection from '../components/SkillsSection';
+import ExperienceSection from '../components/ExperienceSection';
+import WritingsPreview from '../components/WritingsPreview';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="https://dbaugbrwob9sy.cloudfront.net/favicon.png"
-    />
-
-    <!-- Primary Meta Tags -->
-    <title>Pavan's Portfolio</title>
-    <meta name="title" content="Pavan's Portfolio" />
-    <meta
-      name="description"
-      content="Pavan crafts applications with the MERN Stack, while also venturing into  Cloud and Blockchain technologies.  "
-    />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.pavankp.dev/" />
-    <meta property="og:title" content="Pavan's Portfolio" />
-    <meta
-      property="og:description"
-      content="Pavan crafts applications with the MERN Stack, while also venturing into  Cloud and Blockchain technologies.  "
-    />
-    <meta
-      property="og:image"
-      content="https://dbaugbrwob9sy.cloudfront.net/OG.png"
-    />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.pavankp.dev/" />
-    <meta property="twitter:title" content="Pavan's Portfolio" />
-    <meta
-      property="twitter:description"
-      content="Pavan crafts applications with the MERN Stack, while also venturing into  Cloud and Blockchain technologies.  "
-    />
-    <meta
-      property="twitter:image"
-      content="https://dbaugbrwob9sy.cloudfront.net/OG.png"
-    />
-  </head>
-  <body>
-    <Navbar />
-    <main class="container">
-      <div class="lg-glow"></div>
-      <div class="lg-glow-2"></div>
-      <Hero />
-      <div class="lg-hidden">
-        <div class="mb-glow"></div>
-        <div class="mb-glow-2"></div>
-        <SkillSet />
-        <Writings />
-        <Works />
-        <div class="learning_books_section">
-          <Learnings />
-          <Books />
-        </div>
-      </div>
-
-      <div class="sm-hidden deck">
-        <div class="grid_item">
-          <Writings />
-          <Works />
-        </div>
-        <div class="grid_item">
-          <SkillSet />
-          <Learnings />
-          <Books />
-        </div>
-      </div>
-    </main>
-    <Footer />
-    <script data-goatcounter="https://pavankp.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-  </body>
-</html>
+<Layout title="Pavan Kumar - Full Stack & Web3 Developer">
+  <div class="space-y-24 pb-12" transition:animate="fade">
+    <HeroSection client:load />
+    <SkillsSection client:visible />
+    <ExperienceSection client:visible />
+    <WritingsPreview client:visible />
+  </div>
+</Layout>

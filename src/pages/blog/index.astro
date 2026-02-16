@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogList from '../../components/BlogList';
+---
+
+<Layout title="Blog - Pavan Kumar">
+  <div transition:animate="fade">
+    <BlogList client:load />
+  </div>
+</Layout>

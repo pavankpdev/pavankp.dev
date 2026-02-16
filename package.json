@@ -1,26 +1,28 @@
 {
-  "name": "",
-  "type": "module",
+  "name": "pavankp-dev",
+  "private": true,
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/react": "^2.1.3",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "astro": "^2.4.1",
-    "axios": "^1.4.0",
-    "i": "^0.3.7",
-    "npm": "^10.8.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.8.0",
-    "rss-parser": "^3.13.0",
-    "sass": "^1.62.1"
+    "@astrojs/react": "^4.2.0",
+    "clsx": "2.1.1",
+    "lucide-react": "0.487.0",
+    "motion": "12.23.24",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "tailwind-merge": "3.2.0",
+    "tw-animate-css": "1.3.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.12",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "astro": "^5.5.0",
+    "tailwindcss": "4.1.12"
   }
 }

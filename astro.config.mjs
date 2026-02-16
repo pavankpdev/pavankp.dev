@@ -1,10 +1,10 @@
-import { defineConfig } from "astro/config";
+import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import tailwindcss from '@tailwindcss/vite';
 
-import react from "@astrojs/react";
-
-// https://astro.build/config
 export default defineConfig({
-  css: ["./src/styles/fonts.css" // path to your CSS file
-  ],
-  integrations: [react()]
+  integrations: [react()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
 });
