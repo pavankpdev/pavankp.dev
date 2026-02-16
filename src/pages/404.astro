@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="404 - Lost in Cyberspace">
+  <div class="relative min-h-[80vh] flex flex-col items-center justify-center px-4 overflow-hidden" transition:animate="fade">
+
+    <!-- CRT scanline overlay -->
+    <div class="pointer-events-none fixed inset-0 z-50 scanlines"></div>
+
+    <!-- Floating glitch fragments -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="glitch-fragment fragment-1"></div>
+      <div class="glitch-fragment fragment-2"></div>
+      <div class="glitch-fragment fragment-3"></div>
+      <div class="glitch-fragment fragment-4"></div>
+      <div class="glitch-fragment fragment-5"></div>
+    </div>
+
+    <!-- Main 404 display -->
+    <div class="relative z-10 text-center">
+
+      <!-- Glitchy 404 number -->
+      <div class="relative mb-6">
+        <h1 class="text-[8rem] sm:text-[12rem] md:text-[16rem] font-orbitron font-bold leading-none select-none glitch-text" data-text="404">
+          404
+        </h1>
+        <div class="absolute inset-0 flex items-center justify-center opacity-30">
+          <span class="text-[8rem] sm:text-[12rem] md:text-[16rem] font-orbitron font-bold text-magenta-500 glitch-layer-1" aria-hidden="true">404</span>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center opacity-30">
+          <span class="text-[8rem] sm:text-[12rem] md:text-[16rem] font-orbitron font-bold text-cyan-400 glitch-layer-2" aria-hidden="true">404</span>
+        </div>
+      </div>
+
+      <!-- ASCII cat -->
+      <pre class="font-mono text-cyan-400/80 text-xs sm:text-sm mb-8 leading-tight ascii-cat inline-block mx-auto"><code>    /\_/\
+   ( o.o )
+    > ^ <
+   /|   |\
+  (_|   |_) </code></pre>
+
+      <!-- Terminal-style messages -->
+      <div class="max-w-lg mx-auto mb-10 space-y-3">
+        <div class="font-mono text-sm sm:text-base">
+          <span class="text-magenta-400">~</span>
+          <span class="text-cyan-400">/blog</span>
+          <span class="text-neutral-500"> $ </span>
+          <span class="text-neutral-300 typing-line typing-1">cat this_page.md</span>
+        </div>
+        <div class="font-mono text-sm sm:text-base">
+          <span class="text-red-400 typing-line typing-2">error:</span>
+          <span class="text-neutral-400 typing-line typing-2"> file not found in this dimension</span>
+        </div>
+        <div class="font-mono text-sm sm:text-base">
+          <span class="text-neutral-500 typing-line typing-3">// the page you're looking for has</span>
+        </div>
+        <div class="font-mono text-sm sm:text-base">
+          <span class="text-neutral-500 typing-line typing-3">// been mass collected. or never existed.</span>
+        </div>
+        <div class="font-mono text-sm sm:text-base mt-4">
+          <span class="text-magenta-400 typing-line typing-4">~</span>
+          <span class="text-cyan-400 typing-line typing-4">/blog</span>
+          <span class="text-neutral-500 typing-line typing-4"> $ </span>
+          <span class="text-neutral-200 blink-cursor typing-line typing-4">_</span>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a
+          href="/blog"
+          class="group relative px-8 py-3 font-orbitron font-bold text-sm uppercase tracking-wider text-cyan-400 border border-cyan-500/50 bg-cyan-950/20 clip-path-slant hover:bg-cyan-500/20 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.3)] transition-all duration-300 no-underline"
+        >
+          <span class="relative z-10">cd /blog</span>
+        </a>
+        <a
+          href="/"
+          class="group relative px-8 py-3 font-orbitron font-bold text-sm uppercase tracking-wider text-magenta-400 border border-magenta-500/50 bg-magenta-950/20 clip-path-slant hover:bg-magenta-500/20 hover:border-magenta-400 hover:shadow-[0_0_20px_rgba(232,121,249,0.3)] transition-all duration-300 no-underline"
+        >
+          <span class="relative z-10">cd ~</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  /* CRT Scanlines */
+  .scanlines {
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.03) 2px,
+      rgba(0, 0, 0, 0.03) 4px
+    );
+    animation: scanline-scroll 10s linear infinite;
+  }
+
+  .scanlines::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+  }
+
+  @keyframes scanline-scroll {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100vh; }
+  }
+
+  /* Glitch text effect */
+  .glitch-text {
+    color: white;
+    text-shadow:
+      0 0 10px rgba(34, 211, 238, 0.5),
+      0 0 40px rgba(34, 211, 238, 0.2);
+    animation: glitch-main 4s infinite;
+  }
+
+  .glitch-layer-1 {
+    animation: glitch-1 4s infinite;
+  }
+
+  .glitch-layer-2 {
+    animation: glitch-2 4s infinite;
+  }
+
+  @keyframes glitch-main {
+    0%, 90%, 100% { transform: none; }
+    91% { transform: skewX(-2deg) translateX(2px); }
+    92% { transform: skewX(3deg) translateX(-2px); }
+    93% { transform: none; }
+    94% { transform: skewX(-1deg) translateX(1px); }
+    95% { transform: none; }
+  }
+
+  @keyframes glitch-1 {
+    0%, 88%, 100% { clip-path: inset(0 0 0 0); transform: none; }
+    89% { clip-path: inset(20% 0 60% 0); transform: translateX(-8px); }
+    90% { clip-path: inset(50% 0 20% 0); transform: translateX(6px); }
+    91% { clip-path: inset(10% 0 70% 0); transform: translateX(-4px); }
+    92% { clip-path: inset(0 0 0 0); transform: none; }
+  }
+
+  @keyframes glitch-2 {
+    0%, 92%, 100% { clip-path: inset(0 0 0 0); transform: none; }
+    93% { clip-path: inset(60% 0 10% 0); transform: translateX(8px); }
+    94% { clip-path: inset(30% 0 40% 0); transform: translateX(-6px); }
+    95% { clip-path: inset(70% 0 5% 0); transform: translateX(4px); }
+    96% { clip-path: inset(0 0 0 0); transform: none; }
+  }
+
+  /* ASCII cat float animation */
+  .ascii-cat {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Typing reveal */
+  .typing-line {
+    opacity: 0;
+    animation: type-reveal 0.1s forwards;
+  }
+
+  .typing-1 { animation-delay: 0.5s; }
+  .typing-2 { animation-delay: 1.2s; }
+  .typing-3 { animation-delay: 1.8s; }
+  .typing-4 { animation-delay: 2.5s; }
+
+  @keyframes type-reveal {
+    to { opacity: 1; }
+  }
+
+  /* Blinking cursor */
+  .blink-cursor {
+    animation: type-reveal 0.1s 2.5s forwards, blink 1s 2.6s step-end infinite;
+  }
+
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+
+  /* Floating glitch fragments */
+  .glitch-fragment {
+    position: absolute;
+    border: 1px solid;
+    opacity: 0;
+    animation: fragment-drift 8s ease-in-out infinite;
+  }
+
+  .fragment-1 {
+    width: 60px;
+    height: 2px;
+    border-color: rgba(34, 211, 238, 0.3);
+    background: rgba(34, 211, 238, 0.1);
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .fragment-2 {
+    width: 2px;
+    height: 40px;
+    border-color: rgba(232, 121, 249, 0.3);
+    background: rgba(232, 121, 249, 0.1);
+    top: 60%;
+    right: 15%;
+    animation-delay: 1.5s;
+  }
+
+  .fragment-3 {
+    width: 30px;
+    height: 30px;
+    border-color: rgba(34, 211, 238, 0.15);
+    top: 40%;
+    left: 75%;
+    animation-delay: 3s;
+    transform: rotate(45deg);
+  }
+
+  .fragment-4 {
+    width: 80px;
+    height: 1px;
+    border-color: rgba(232, 121, 249, 0.2);
+    background: rgba(232, 121, 249, 0.05);
+    top: 75%;
+    left: 25%;
+    animation-delay: 4.5s;
+  }
+
+  .fragment-5 {
+    width: 20px;
+    height: 20px;
+    border-color: rgba(34, 211, 238, 0.2);
+    border-radius: 50%;
+    top: 15%;
+    right: 25%;
+    animation-delay: 2s;
+  }
+
+  @keyframes fragment-drift {
+    0%, 100% { opacity: 0; transform: translateY(0) translateX(0); }
+    20% { opacity: 0.6; }
+    50% { opacity: 0.3; }
+    80% { opacity: 0.5; }
+    90% { opacity: 0; transform: translateY(-20px) translateX(10px); }
+  }
+</style>
