@@ -4,7 +4,6 @@ excerpt: "A comprehensive deep dive into React Server Components — how they wo
 date: "2023-05-08"
 readTime: "9 min read"
 tags: ["React", "Performance", "Web"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/64587ddb5d912ddfb08f4d60.png"
 ---
 
 React Server Components have been something that's been bugging me for a while now. There's been a lot of debate online, and a lot of comparisons have made it really hard to understand what exactly it is and how it works. But now, after doing some research, I think I have a good understanding of it.

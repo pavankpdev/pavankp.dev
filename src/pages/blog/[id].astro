@@ -11,8 +11,10 @@ export async function getStaticPaths() {
   }));
 }
 
+const mediaUrl = import.meta.env.PUBLIC_MEDIA_URL;
 const { post } = Astro.props;
 const { Content } = await render(post);
+const imageUrl = `${mediaUrl}/blog/thumbnails/${post.id}.avif`;
 ---
 
 <Layout title={`${post.data.title} - Pavan Kumar`}>
@@ -54,7 +56,7 @@ const { Content } = await render(post);
 
     <div class="relative aspect-video rounded-xl overflow-hidden mb-12 border border-white/10 shadow-2xl shadow-cyan-900/20">
       <ImageWithFallback
-        src={post.data.image}
+        src={imageUrl}
         alt={post.data.title}
         className="w-full h-full object-cover"
         client:load

@@ -4,7 +4,6 @@ excerpt: "A personal reflection on how shifting your mindset can transform your 
 date: "2024-05-26"
 readTime: "6 min read"
 tags: ["Mindset", "Growth", "Learning"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/6652ea1d1e60a744a08042ab.png"
 ---
 
 ### Context

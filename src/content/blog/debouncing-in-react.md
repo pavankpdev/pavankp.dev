@@ -4,7 +4,6 @@ excerpt: "A simple guide to implementing debouncing in React apps — improving 
 date: "2021-10-16"
 readTime: "5 min read"
 tags: ["React", "JavaScript", "Performance"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/616ab70a18374f257327baf2.png"
 ---
 
 Hey guys welcome to my blog, today we'll be talking about debouncing in JavaScript and React.

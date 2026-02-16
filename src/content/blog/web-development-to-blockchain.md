@@ -4,7 +4,6 @@ excerpt: "A practical guide for web developers looking to transition into blockc
 date: "2023-12-07"
 readTime: "9 min read"
 tags: ["Blockchain", "Web3", "Career"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/65715fe3279b5cae6c9a3e1f.png"
 ---
 
 As the digital landscape evolves, transitioning from web development to blockchain offers an exciting journey into a revolutionary field. This guide illuminates the path for developers looking to make this seamless shift toward blockchain development.

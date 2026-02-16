@@ -4,7 +4,6 @@ excerpt: "Does re-rendering in React actually hurt performance? Understanding wh
 date: "2023-03-02"
 readTime: "3 min read"
 tags: ["React", "Performance", "JavaScript"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/6400282e026265ade3aefb4b.png"
 ---
 
 A significant amount of time is often spent trying to optimize a React app. Though optimization is a crucial phase in software development, it can go too far. Let's discuss Re-renders in React today and whether they impact performance.

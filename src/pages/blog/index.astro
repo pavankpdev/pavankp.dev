@@ -3,9 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import BlogList from '../../components/BlogList';
 import { getCollection } from 'astro:content';
 
+const mediaUrl = import.meta.env.PUBLIC_MEDIA_URL;
 const posts = await getCollection('blog');
 const postsMeta = posts
-  .map((p) => ({ id: p.id, ...p.data }))
+  .map((p) => ({ id: p.id, ...p.data, image: `${mediaUrl}/blog/thumbnails/${p.id}.avif` }))
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 

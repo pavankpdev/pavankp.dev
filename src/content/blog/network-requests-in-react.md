@@ -4,7 +4,6 @@ excerpt: "Learn the right way to make network requests in React — from basic f
 date: "2023-02-20"
 readTime: "4 min read"
 tags: ["React", "JavaScript", "Web"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/63f3742b5696362fa2f59efa.png"
 ---
 
 By default, React won't suggest the ideal method for making network requests; instead, it expects you to develop a method on your own. So, it is important to understand one of the many effective ways to do this.

@@ -98,7 +98,7 @@ export default function BlogList({ posts }: Props) {
                   color="rgba(34, 211, 238, 0.06)"
                   className="cursor-pointer group bg-neutral-900 border-white/10 hover:shadow-[0_0_20px_rgba(34,211,238,0.1)] hover:border-cyan-500/20 transition-all duration-300 flex flex-col h-full"
                 >
-                  <div className="h-48 overflow-hidden relative rounded-t-xl">
+                  <div className="h-56 overflow-hidden relative rounded-t-xl">
                     <ImageWithFallback
                       src={post.image}
                       alt={post.title}

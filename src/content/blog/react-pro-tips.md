@@ -4,7 +4,6 @@ excerpt: "Top 10 tips to level up your React skills — from component patterns 
 date: "2023-03-14"
 readTime: "7 min read"
 tags: ["React", "JavaScript", "Web"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/6410070e2324a3a08edf549d.png"
 ---
 
 React is a popular JavaScript library widely used for building web applications. Whether you are a beginner or an experienced developer, there is always room for improvement when it comes to React skills.

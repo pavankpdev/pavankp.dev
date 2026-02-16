@@ -4,7 +4,6 @@ excerpt: "Why traditional goal-setting often falls short, and how shifting to mi
 date: "2023-06-08"
 readTime: "7 min read"
 tags: ["Mindset", "Productivity", "Growth"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/64815e0ea88ea040d93105d7.png"
 ---
 
 The goals, dreams, missions, and whatnot, we've been in this cycle since childhood. Recently, I had an eye-opening realization that many of the goals we set are often naive and lack the necessary depth to guide us on our journey.

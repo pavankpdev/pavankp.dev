@@ -4,7 +4,6 @@ excerpt: "Learn how co-locating state can optimize your React apps without reach
 date: "2023-03-10"
 readTime: "3 min read"
 tags: ["React", "Performance", "JavaScript"]
-image: "https://cdn.hashnode.com/res/hashnode/image/upload/v1701925494984/640b3c34cc26cb17b030e319.png"
 ---
 
 As the application grows, React states become more widespread. Poorly organized states can cause excessive re-rendering and hinder performance.
