@@ -7,7 +7,9 @@ import WritingsPreview from '../components/WritingsPreview';
 import { getCollection } from 'astro:content';
 
 const posts = await getCollection('blog');
-const postsMeta = posts.map((p) => ({ id: p.id, ...p.data }));
+const postsMeta = posts
+  .map((p) => ({ id: p.id, ...p.data }))
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <Layout title="Pavan Kumar - Full Stack & Web3 Developer">
