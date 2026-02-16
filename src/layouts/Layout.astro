@@ -7,9 +7,13 @@ import '../styles/index.css';
 
 interface Props {
   title?: string;
+  description?: string;
 }
 
-const { title = 'Pavan Kumar - Developer Portfolio' } = Astro.props;
+const {
+  title = 'Pavan Kumar - Developer Portfolio',
+  description = 'Full Stack & Web3 Developer building decentralized applications, blockchain solutions, and modern web platforms.',
+} = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -18,6 +22,22 @@ const currentPath = Astro.url.pathname;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="author" content="Pavan Kumar" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
     <ViewTransitions />
   </head>
@@ -35,7 +55,7 @@ const currentPath = Astro.url.pathname;
             width={48}
             height={48}
             className="fill-cyan-500/15 stroke-white/[0.03] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_50%,transparent_100%)]"
-            client:load
+            client:idle
           />
         </div>
 
