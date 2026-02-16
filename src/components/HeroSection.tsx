@@ -53,7 +53,14 @@ export default function HeroSection() {
             className="text-neutral-400 text-lg md:text-xl max-w-lg font-mono"
           >
             MERN Stack Developer who also happens to work with Blockchain &
-            Cloud. Building duolearn.tech, docmysol.com & evmindex.dev.
+            Cloud. I also{" "}
+            <a
+              href="/blog"
+              className="text-cyan-400 hover:text-cyan-300 underline underline-offset-4 decoration-cyan-500/30 hover:decoration-cyan-400 transition-colors"
+            >
+              write blogs
+            </a>
+            .
           </motion.p>
 
           <motion.div
