@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Button from "./Button";
 
 interface NavbarProps {
   currentPath: string;
@@ -49,15 +48,6 @@ export default function Navbar({ currentPath }: NavbarProps) {
                   {item.label}
                 </a>
               ))}
-              <Button
-                variant="primary"
-                className="ml-4 !py-2 !px-4 text-xs"
-                onClick={() =>
-                  window.open("mailto:pavankpdev@gmail.com", "_blank")
-                }
-              >
-                Contact Me
-              </Button>
             </div>
           </div>
 
