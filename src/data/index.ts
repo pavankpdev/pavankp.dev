@@ -1,10 +1,10 @@
 export interface SkillGroup {
   category: string;
+  summary: string;
   items: string[];
 }
 
 export interface Experience {
-  id: number;
   role: string;
   company: string;
   duration: string;
@@ -12,92 +12,144 @@ export interface Experience {
   impact: string[];
 }
 
-export interface BlogPostMeta {
-  id: string;
-  title: string;
-  excerpt: string;
-  date: string;
-  readTime: string;
-  tags: string[];
-  image: string;
+export interface Project {
+  name: string;
+  description: string;
+  stack: string[];
 }
 
+export const SITE = {
+  name: "Pavan Kumar",
+  role: "Full Stack AI Engineer",
+  headline:
+    "Full Stack AI Engineer specializing in distributed systems, cloud infrastructure, and scalable backend architectures.",
+  summary:
+    "I build production-grade AI systems, data-heavy backends, and cloud-native platforms where reliability, latency, and maintainability matter.",
+  email: import.meta.env.PUBLIC_CONTACT_EMAIL || "your-email@example.com",
+  substackUrl: import.meta.env.PUBLIC_SUBSTACK_URL || "https://substack.com",
+};
+
+export const SOCIALS = [
+  { label: "GitHub", href: "https://github.com/pavankpdev" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/pavan-kumar-2000" },
+  { label: "X", href: "https://x.com/pavank38" },
+];
+
+export const STATS = [
+  { label: "Backend and full stack delivery", value: "5+ yrs" },
+  { label: "Large-row analytical datasets", value: "300K+" },
+  { label: "Teams led across product builds", value: "5-6" },
+];
+
 export const SKILLS: SkillGroup[] = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "GraphQL"] },
-  { category: "Backend", items: ["Node.js", "NestJS", "Express.js", "Go", "MongoDB", "PostgreSQL", "Prisma"] },
-  { category: "Blockchain", items: ["Ethereum", "Solidity", "HardHat", "ethers.js", "Polygon", "Solana"] },
-  { category: "DevOps & Tools", items: ["Docker", "AWS", "Serverless", "Git", "CI/CD"] },
+  {
+    category: "AI Systems",
+    summary: "Agent workflows, AI product surfaces, prompt orchestration, evaluation-minded delivery.",
+    items: ["Agentic workflows", "LLM integration", "AI product engineering", "Workflow automation"],
+  },
+  {
+    category: "Backend",
+    summary: "Backend-heavy systems with clear contracts, durable data models, and scalable APIs.",
+    items: ["Node.js", "NestJS", "Express.js", "Go", "GraphQL", "Prisma"],
+  },
+  {
+    category: "Cloud and Infrastructure",
+    summary: "Serverless, containerized, and infrastructure-as-code deployments for production teams.",
+    items: ["AWS", "Lambda", "Docker", "Kubernetes", "Terraform CDK", "CI/CD"],
+  },
+  {
+    category: "Data and Product",
+    summary: "Interfaces and services for complex operational data, analytics, and internal tooling.",
+    items: ["PostgreSQL", "MongoDB", "React", "Next.js", "Angular", "TypeScript"],
+  },
 ];
 
 export const EXPERIENCE: Experience[] = [
   {
-    id: 1,
     role: "Senior Full Stack Developer",
     company: "HeimLabs",
     duration: "Sep 2025 - Present",
-    description: "Building AI-driven products and agentic systems for next-gen financial platforms.",
+    description:
+      "Building AI-driven product experiences and agentic systems for financial workflows.",
     impact: [
-      "Developing agentic AI experiences that autonomously reason, plan, and execute complex workflows.",
-      "Building an AI-powered wealth management solution spanning perps trading and prediction markets, leveraging the x402 payment protocol."
-    ]
+      "Developing autonomous AI experiences that reason, plan, and execute multi-step workflows.",
+      "Building an AI-powered wealth management platform spanning trading workflows, prediction markets, and payment protocol integrations.",
+    ],
   },
   {
-    id: 2,
     role: "Senior Software Developer",
     company: "Fidociary",
     duration: "Jan 2025 - Aug 2025",
-    description: "Led end-to-end product development driving the company's core vision and technical roadmap.",
+    description:
+      "Led end-to-end product development across identity, compliance, and privacy-oriented systems.",
     impact: [
-      "Spearheaded the BETA launch at Dubai FinTech Summit, gaining early adopters and raising awareness about trustless identity and decentralized compliance.",
-      "Designed and developed a decentralized identity (DiD) platform with reusable KYC solutions, empowering users with data ownership and enabling privacy-preserving verification via ZK proofs."
-    ]
+      "Drove the beta launch at Dubai FinTech Summit, shaping the product narrative and technical roadmap.",
+      "Designed reusable identity and KYC flows with privacy-preserving verification patterns.",
+    ],
   },
   {
-    id: 3,
     role: "Senior Full Stack Developer",
-    company: "LanceSoft India (Client: Bosch)",
+    company: "LanceSoft India, Client: Bosch",
     duration: "Mar 2024 - Dec 2024",
-    description: "Contributing to the Decarbonisation Index (DKI) for Porsche, building a tool to visualize carbon emissions across the Volkswagen group.",
+    description:
+      "Built cloud-native software for Porsche's Decarbonisation Index across the Volkswagen group.",
     impact: [
-      "Leveraging Angular, AWS Lambdas, and Terraform CDK to build a scalable, serverless architecture.",
-      "Building a system to visualize and handle a large dataset with over 300K+ rows to provide comprehensive insights into vehicle emissions.",
-      "Supporting Volkswagen's sustainability initiatives by aiding strategic planning and efforts to reduce carbon footprints."
-    ]
+      "Used Angular, AWS Lambda, and Terraform CDK to support a scalable serverless architecture.",
+      "Built tools for analyzing 300K+ rows of vehicle emissions data for operational decision-making.",
+    ],
   },
   {
-    id: 4,
     role: "Technical Manager",
     company: "Nonceblox",
     duration: "Jan 2023 - Jan 2024",
-    description: "Led blockchain projects and managed a team of 5-6 professionals.",
+    description:
+      "Managed a product engineering team and delivered complex platform work across emerging technology programs.",
     impact: [
-      "Led the project to tokenize real-world assets, enhancing liquidity and fostering innovation in the blockchain space.",
-      "Actively developed a metaverse aggregator with a focus on games and PFP NFTs, contributing to the growth of the virtual world ecosystem.",
-      "Led a team of 5-6 professionals, ensuring effective collaboration and successful project execution."
-    ]
+      "Led a team of 5-6 engineers through architecture, delivery planning, and production execution.",
+      "Shipped systems involving digital assets, high-throughput onboarding, and cross-functional stakeholder delivery.",
+    ],
   },
   {
-    id: 5,
     role: "Full Stack Developer",
     company: "Nonceblox",
     duration: "Aug 2021 - Jan 2023",
-    description: "Led high-profile Web3 projects, orchestrated a layer 1 Blockchain, and managed associated applications.",
+    description:
+      "Built backend-heavy web platforms, infrastructure services, and high-traffic product workflows.",
     impact: [
-      "Demonstrated proficiency with AWS services like SES, SQS, and Lambdas, optimizing cloud-based solutions.",
-      "Actively involved in Solidity smart contract development, audits, and created innovative DApps using MERN and Hardhat.",
-      "Architected a robust waitlisting system to efficiently handle surges in requests for a limited NFT minting DApp.",
-      "Led the creation of a node provider system using Kubernetes and Docker."
-    ]
+      "Used AWS SES, SQS, Lambda, Kubernetes, and Docker to improve cloud reliability and operations.",
+      "Architected a waitlisting system built to absorb launch spikes and protect downstream services.",
+    ],
   },
   {
-    id: 6,
     role: "Full Stack Developer",
     company: "DevTown",
     duration: "Feb 2021 - Aug 2021",
-    description: "Built and maintained the DevTown Smart Edtech platform for students and administrators.",
+    description:
+      "Built and maintained an edtech platform for students, administrators, progress tracking, and analytics.",
     impact: [
-      "Utilized MERN and GraphQL to create a robust and efficient platform with progress tracking and analytics.",
-      "Successfully delivered the MVP platform within an impressive 30-day timeframe."
-    ]
-  }
+      "Delivered the MVP in 30 days using MERN and GraphQL.",
+      "Built product surfaces for learning progress, administration, and operational visibility.",
+    ],
+  },
+];
+
+export const PROJECTS: Project[] = [
+  {
+    name: "AI Wealth Workflows",
+    description:
+      "Agentic finance product work combining planning, execution, and user-facing decision support.",
+    stack: ["AI systems", "TypeScript", "Backend architecture", "Payments"],
+  },
+  {
+    name: "Decarbonisation Index",
+    description:
+      "Cloud-native emissions analytics tooling for large vehicle datasets across enterprise stakeholders.",
+    stack: ["Angular", "AWS Lambda", "Terraform CDK", "Data systems"],
+  },
+  {
+    name: "Launch-Scale Waitlisting",
+    description:
+      "A traffic-aware onboarding system designed to protect services during constrained high-demand launches.",
+    stack: ["Node.js", "AWS", "Queues", "Distributed systems"],
+  },
 ];
