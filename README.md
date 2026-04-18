@@ -21,7 +21,6 @@ bun run dev
 ```sh
 PUBLIC_SITE_URL=https://pavankp.dev
 PUBLIC_CONTACT_EMAIL=hello@example.com
-PUBLIC_RESUME_URL=https://your-bucket.s3.amazonaws.com/Pavan-Kumar-Resume.pdf
 PUBLIC_BLOG_RSS_URL=https://your-publication.substack.com/feed
 PUBLIC_SUBSTACK_URL=https://your-publication.substack.com
 ```

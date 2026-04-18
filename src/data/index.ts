@@ -14,7 +14,6 @@ export const SITE = {
     "Full stack engineer working across AI, distributed systems, cloud infrastructure, and product-grade interfaces.",
   email: import.meta.env.PUBLIC_CONTACT_EMAIL || "your-email@example.com",
   substackUrl: import.meta.env.PUBLIC_SUBSTACK_URL || "https://substack.com",
-  resumeUrl: import.meta.env.PUBLIC_RESUME_URL || "https://pavankp.dev/resume.pdf",
 };
 
 export const SOCIALS = [

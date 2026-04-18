@@ -11,7 +11,6 @@ import { SITE, SOCIALS } from "../data";
     <p class="hero-context">{SITE.summary}</p>
 
     <div class="hero-actions" aria-label="Primary links">
-      <a class="resume-link" href={SITE.resumeUrl} target="_blank" rel="noopener noreferrer">View Resume</a>
       <div class="social-links">
         {SOCIALS.map((social) => (
           <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>
