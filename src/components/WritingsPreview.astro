@@ -1,39 +1,30 @@
 ---
-import SectionHeader from "./SectionHeader.astro";
 import type { ExternalPost } from "../lib/rss";
-import { SITE } from "../data";
 
 interface Props {
   posts: ExternalPost[];
+  hasMore?: boolean;
 }
 
-const { posts } = Astro.props;
+const { posts, hasMore = false } = Astro.props;
 ---
 
-<section id="writing" class="section-pad site-shell">
-  <SectionHeader
-    eyebrow="Writing"
-    title="Notes on engineering, systems, and the habits behind durable software."
-    description="Posts are fetched from the external publication feed at build time. Each card opens the original post."
-  />
+<section class="site-shell profile-section writing-section" aria-labelledby="writing-title">
+  <h2 id="writing-title">Writing</h2>
 
-  {posts.length > 0 ? (
-    <div class="grid gap-4 md:grid-cols-3">
-      {posts.map((post) => (
-        <a class="panel block p-6 no-underline transition-colors hover:border-[var(--accent)]" href={post.url} target="_blank" rel="noopener noreferrer">
-          <p class="font-mono text-sm text-[var(--accent-strong)]">{post.date}</p>
-          <h3 class="mt-4 text-xl font-bold leading-tight">{post.title}</h3>
-          {post.preview && <p class="body-copy mt-4 text-sm">{post.preview}</p>}
-          <span class="mt-6 inline-flex text-sm font-bold text-[var(--accent-strong)]">Read on publication</span>
-        </a>
-      ))}
-    </div>
-  ) : (
-    <div class="panel p-6">
-      <p class="body-copy">
-        Add <span class="font-mono">PUBLIC_BLOG_RSS_URL</span> with a Substack RSS feed to show the latest posts here.
-      </p>
-      <a class="button button-secondary mt-5" href={SITE.substackUrl} target="_blank" rel="noopener noreferrer">Open publication</a>
-    </div>
+  {posts.length > 0 && (
+    <>
+      <div class="writing-list">
+        {posts.map((post) => (
+          <a href={post.url} target="_blank" rel="noopener noreferrer">
+            <span>{post.title}</span>
+            <time>{post.date}</time>
+          </a>
+        ))}
+      </div>
+      {hasMore && <a class="writing-more" href="/blogs">View More</a>}
+    </>
   )}
+
+  {posts.length === 0 && <p class="empty-writing">No blogs published yet.</p>}
 </section>

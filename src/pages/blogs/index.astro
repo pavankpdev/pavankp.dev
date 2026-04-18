@@ -3,10 +3,13 @@ import Layout from "../../layouts/Layout.astro";
 import WritingsPreview from "../../components/WritingsPreview.astro";
 import { getExternalPosts } from "../../lib/rss";
 
-const posts = await getExternalPosts(12);
+const posts = await getExternalPosts();
 ---
 
-<Layout title="Writing - Pavan Kumar">
+<Layout
+  title="Writing | Pavan Kumar"
+  description="Writing by Pavan Kumar on frontend performance, backend systems, AI engineering, and practical software delivery."
+>
   <div class="pt-16">
     <WritingsPreview posts={posts} />
   </div>

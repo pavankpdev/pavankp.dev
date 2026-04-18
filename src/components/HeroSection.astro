@@ -1,45 +1,22 @@
 ---
-import { SITE, SOCIALS, STATS } from "../data";
+import { SITE, SOCIALS } from "../data";
 ---
 
-<section class="site-shell grid items-center gap-12 pb-12 pt-28 md:grid-cols-[1.08fr_0.92fr] md:pb-20">
-  <div>
-    <p class="eyebrow">{SITE.role}</p>
-    <h1 class="mt-5 max-w-4xl font-serif text-[clamp(3rem,6.5vw,5.2rem)] leading-[0.94] tracking-normal">
-      Backend-heavy AI systems for teams that need the work to hold.
-    </h1>
-    <p class="body-copy mt-8 max-w-2xl text-lg md:text-xl">
-      {SITE.headline} I turn product ambiguity into services, workflows, and interfaces that can survive real users.
-    </p>
+<section class="profile-hero site-shell">
+  <div class="hero-kicker">Pavan Kumar</div>
 
-    <div class="mt-8 flex flex-wrap gap-3">
-      <a class="button button-primary" href={`mailto:${SITE.email}`}>Start a conversation</a>
-      <a class="button button-secondary" href="#experience">View experience</a>
-    </div>
+  <div class="hero-grid">
+    <h1>{SITE.role}</h1>
+    <p class="hero-line">{SITE.headline}</p>
+    <p class="hero-context">{SITE.summary}</p>
 
-    <div class="mt-8 flex flex-wrap gap-x-5 gap-y-2 text-sm text-[var(--muted)]">
-      {SOCIALS.map((social) => (
-        <a class="no-underline transition-colors hover:text-[var(--ink)]" href={social.href} target="_blank" rel="noopener noreferrer">
-          {social.label}
-        </a>
-      ))}
+    <div class="hero-actions" aria-label="Primary links">
+      <a class="resume-link" href={SITE.resumeUrl} target="_blank" rel="noopener noreferrer">View Resume</a>
+      <div class="social-links">
+        {SOCIALS.map((social) => (
+          <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>
+        ))}
+      </div>
     </div>
   </div>
-
-  <aside class="panel hidden p-6 md:block">
-    <div class="border-b border-[var(--line)] pb-5">
-      <p class="eyebrow">Current Focus</p>
-      <p class="mt-3 text-2xl font-bold leading-tight">
-        AI product engineering, distributed workflows, and cloud-native backend systems.
-      </p>
-    </div>
-    <div class="divide-y divide-[var(--line)]">
-      {STATS.map((stat) => (
-        <div class="grid grid-cols-[120px_1fr] items-baseline gap-5 py-5">
-          <strong class="font-serif text-4xl leading-none">{stat.value}</strong>
-          <span class="body-copy text-sm">{stat.label}</span>
-        </div>
-      ))}
-    </div>
-  </aside>
 </section>

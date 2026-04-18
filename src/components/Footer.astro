@@ -2,25 +2,10 @@
 import { SITE, SOCIALS } from "../data";
 ---
 
-<footer id="contact" class="border-t border-[var(--line)] bg-[rgba(255,255,255,0.42)] py-10">
-  <div class="site-shell grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
-    <div>
-      <p class="eyebrow">Contact</p>
-      <h2 class="mt-3 max-w-2xl font-serif text-4xl leading-none md:text-6xl">
-        Building AI or backend infrastructure with sharp edges?
-      </h2>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a class="button button-primary" href={`mailto:${SITE.email}`}>Email Pavan</a>
-        <a class="button button-secondary" href="https://linkedin.com/in/pavan-kumar-2000" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-      </div>
-    </div>
-
-    <div class="flex flex-wrap gap-4 md:justify-end">
-      {SOCIALS.map((social) => (
-        <a class="text-sm text-[var(--muted)] no-underline hover:text-[var(--ink)]" href={social.href} target="_blank" rel="noopener noreferrer">
-          {social.label}
-        </a>
-      ))}
-    </div>
-  </div>
+<footer class="site-shell profile-footer">
+  <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+  <span aria-hidden="true">/</span>
+  {SOCIALS.map((social) => (
+    <a href={social.href} target="_blank" rel="noopener noreferrer">{social.label}</a>
+  ))}
 </footer>

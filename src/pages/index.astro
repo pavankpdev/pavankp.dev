@@ -1,21 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import HeroSection from '../components/HeroSection.astro';
-import AboutSection from '../components/AboutSection.astro';
-import SkillsSection from '../components/SkillsSection.astro';
 import ExperienceSection from '../components/ExperienceSection.astro';
-import ProjectsSection from '../components/ProjectsSection.astro';
 import WritingsPreview from '../components/WritingsPreview.astro';
 import { getExternalPosts } from '../lib/rss';
 
-const posts = await getExternalPosts(3);
+const posts = await getExternalPosts(5);
 ---
 
-<Layout title="Pavan Kumar - Full Stack AI Engineer">
+<Layout title="Pavan Kumar | Full Stack AI Engineer">
   <HeroSection />
-  <AboutSection />
-  <SkillsSection />
   <ExperienceSection />
-  <ProjectsSection />
-  <WritingsPreview posts={posts} />
+  <WritingsPreview posts={posts.slice(0, 4)} hasMore={posts.length > 4} />
 </Layout>

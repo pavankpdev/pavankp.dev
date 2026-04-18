@@ -1,34 +1,49 @@
 ---
-import SectionHeader from "./SectionHeader.astro";
 import { EXPERIENCE } from "../data";
+
+const visibleExperience = EXPERIENCE.slice(0, 3);
+const remainingExperience = EXPERIENCE.slice(3);
 ---
 
-<section id="experience" class="section-pad site-shell">
-  <SectionHeader
-    eyebrow="Experience"
-    title="Product engineering across AI, cloud, data, and backend-heavy systems."
-  />
+<section class="site-shell profile-section" aria-labelledby="experience-title">
+  <h2 id="experience-title">Experience</h2>
 
-  <div class="grid gap-4">
-    {EXPERIENCE.map((exp) => (
-      <article class="panel grid gap-5 p-6 md:grid-cols-[240px_1fr]">
-        <div>
-          <p class="font-mono text-sm text-[var(--accent-strong)]">{exp.duration}</p>
-          <h3 class="mt-3 text-xl font-bold leading-tight">{exp.role}</h3>
-          <p class="mt-1 text-[var(--muted)]">{exp.company}</p>
+  <div class="experience-list">
+    {visibleExperience.map((exp) => (
+      <article class="experience-item">
+        <div class="experience-meta">
+          <h3>{exp.company}</h3>
+          <p>{exp.role}</p>
+          <time>{exp.duration}</time>
         </div>
-        <div>
-          <p class="text-lg leading-relaxed">{exp.description}</p>
-          <ul class="mt-5 grid gap-3">
-            {exp.impact.map((item) => (
-              <li class="grid grid-cols-[12px_1fr] gap-3 text-sm leading-6 text-[var(--muted)]">
-                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--signal)]"></span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <ul>
+          {exp.impact.map((item) => <li>{item}</li>)}
+        </ul>
       </article>
     ))}
   </div>
+
+  {remainingExperience.length > 0 && (
+    <div class="more-experience">
+      <input class="more-toggle" id="experience-more" type="checkbox" />
+      <div class="experience-list more-experience-list">
+        {remainingExperience.map((exp) => (
+          <article class="experience-item">
+            <div class="experience-meta">
+              <h3>{exp.company}</h3>
+              <p>{exp.role}</p>
+              <time>{exp.duration}</time>
+            </div>
+            <ul>
+              {exp.impact.map((item) => <li>{item}</li>)}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <label class="more-experience-control" for="experience-more">
+        <span class="more-label">View full experience</span>
+        <span class="less-label">Show less</span>
+      </label>
+    </div>
+  )}
 </section>

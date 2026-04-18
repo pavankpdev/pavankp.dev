@@ -2,17 +2,17 @@
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Page not found - Pavan Kumar">
+<Layout title="Page not found | Pavan Kumar" description="The requested page could not be found.">
   <section class="site-shell flex min-h-screen items-center py-28">
     <div class="max-w-2xl">
-      <p class="eyebrow">404</p>
-      <h1 class="mt-5 font-serif text-[clamp(4rem,16vw,10rem)] leading-none">This page moved.</h1>
-      <p class="body-copy mt-6 text-lg">
+      <p class="font-mono text-sm text-[var(--accent)]">404</p>
+      <h1 class="mt-5 font-serif text-[clamp(4rem,16vw,10rem)] leading-none text-[var(--text)]">This page moved.</h1>
+      <p class="mt-6 text-lg leading-8 text-[var(--muted)]">
         The route is gone, but the portfolio is very much alive.
       </p>
       <div class="mt-8 flex flex-wrap gap-3">
-        <a class="button button-primary" href="/">Return home</a>
-        <a class="button button-secondary" href="/blog">Read writing</a>
+        <a class="resume-link" href="/">Return home</a>
+        <a class="resume-link" href="/blogs">Read writing</a>
       </div>
     </div>
   </section>
