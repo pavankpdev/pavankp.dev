@@ -2,6 +2,8 @@ export interface Experience {
   role: string;
   company: string;
   duration: string;
+  employment?: string;
+  location?: string;
   impact: string[];
 }
 
@@ -24,9 +26,21 @@ export const SOCIALS = [
 
 export const EXPERIENCE: Experience[] = [
   {
+    role: "Senior Software Engineer",
+    company: "BRAHMA AI",
+    duration: "Apr 2026 - Present",
+    employment: "Full-time",
+    location: "Bangalore Urban, Karnataka, India · On-site",
+    impact: [
+      "Working on a product for the media industry.",
+    ],
+  },
+  {
     role: "Senior Full Stack Developer",
     company: "HeimLabs",
-    duration: "Sep 2025 - Present",
+    duration: "Sep 2025 - Apr 2026",
+    employment: "Full-time",
+    location: "Remote",
     impact: [
       "Building agentic AI workflows that reason, plan, and execute multi-step financial operations.",
       "Developing backend services for AI-powered wealth workflows across trading, prediction markets, and payment protocol integrations.",

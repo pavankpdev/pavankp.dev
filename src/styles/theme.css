@@ -210,6 +210,15 @@
     color: var(--muted);
   }
 
+  .experience-meta span,
+  .experience-meta small {
+    display: block;
+    margin-top: 6px;
+    color: var(--quiet);
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
   .experience-meta time {
     display: block;
     margin-top: 10px;

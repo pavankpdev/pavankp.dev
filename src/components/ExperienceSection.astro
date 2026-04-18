@@ -14,7 +14,9 @@ const remainingExperience = EXPERIENCE.slice(3);
         <div class="experience-meta">
           <h3>{exp.company}</h3>
           <p>{exp.role}</p>
+          {exp.employment && <span>{exp.employment}</span>}
           <time>{exp.duration}</time>
+          {exp.location && <small>{exp.location}</small>}
         </div>
         <ul>
           {exp.impact.map((item) => <li>{item}</li>)}
@@ -32,7 +34,9 @@ const remainingExperience = EXPERIENCE.slice(3);
             <div class="experience-meta">
               <h3>{exp.company}</h3>
               <p>{exp.role}</p>
+              {exp.employment && <span>{exp.employment}</span>}
               <time>{exp.duration}</time>
+              {exp.location && <small>{exp.location}</small>}
             </div>
             <ul>
               {exp.impact.map((item) => <li>{item}</li>)}
