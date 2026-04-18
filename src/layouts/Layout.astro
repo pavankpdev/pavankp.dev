@@ -1,7 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import Navbar from '../components/Navbar';
-import { AnimatedGridPattern } from '../components/ui/animated-grid-pattern';
+import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/index.css';
 
@@ -11,10 +9,9 @@ interface Props {
 }
 
 const {
-  title = 'Pavan Kumar - Developer Portfolio',
-  description = 'Full Stack & Web3 Developer building decentralized applications, blockchain solutions, and modern web platforms.',
+  title = 'Pavan Kumar - Full Stack AI Engineer',
+  description = 'Full Stack AI Engineer specializing in distributed systems, cloud infrastructure, AI systems, and scalable backend architectures.',
 } = Astro.props;
-const currentPath = Astro.url.pathname;
 ---
 
 <!doctype html>
@@ -24,7 +21,7 @@ const currentPath = Astro.url.pathname;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="author" content="Pavan Kumar" />
-    <meta name="theme-color" content="#0a0a0a" />
+    <meta name="theme-color" content="#f7f5ef" />
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
@@ -39,29 +36,13 @@ const currentPath = Astro.url.pathname;
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
-    <ViewTransitions />
   </head>
   <body>
-    <div class="min-h-screen bg-neutral-950 text-neutral-200 selection:bg-cyan-500/30 selection:text-white font-sans overflow-x-hidden">
-      <Navbar currentPath={currentPath} client:load />
-
-      <main class="pt-20 relative">
-        <!-- Global animated background grid -->
-        <div class="fixed inset-0 pointer-events-none z-0" transition:persist="grid-background">
-          <AnimatedGridPattern
-            numSquares={40}
-            maxOpacity={0.1}
-            duration={4}
-            width={48}
-            height={48}
-            className="fill-cyan-500/15 stroke-white/[0.03] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_50%,transparent_100%)]"
-            client:idle
-          />
-        </div>
-
+    <div class="min-h-screen overflow-x-hidden">
+      <Navbar />
+      <main>
         <slot />
       </main>
-
       <Footer />
     </div>
   </body>

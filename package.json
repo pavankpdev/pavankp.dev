@@ -9,22 +9,12 @@
     "preview": "astro preview"
   },
   "dependencies": {
-    "@astrojs/react": "^4.2.0",
     "@tailwindcss/typography": "^0.5.19",
-    "clsx": "2.1.1",
-    "lucide-react": "0.487.0",
-    "motion": "12.23.24",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "share-buttons": "^1.9.0",
-    "tailwind-merge": "3.2.0",
-    "tw-animate-css": "1.3.8"
+    "fast-xml-parser": "^5.7.1"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "4.1.12",
-    "@types/react": "^18.3.0",
-    "@types/react-dom": "^18.3.0",
-    "astro": "^5.5.0",
-    "tailwindcss": "4.1.12"
+    "@tailwindcss/vite": "^4.2.2",
+    "astro": "^6.1.8",
+    "tailwindcss": "^4.2.2"
   }
 }

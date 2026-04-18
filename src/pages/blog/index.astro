@@ -1,17 +1,13 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import BlogList from '../../components/BlogList';
-import { getCollection } from 'astro:content';
+import Layout from "../../layouts/Layout.astro";
+import WritingsPreview from "../../components/WritingsPreview.astro";
+import { getExternalPosts } from "../../lib/rss";
 
-const mediaUrl = import.meta.env.PUBLIC_MEDIA_URL;
-const posts = await getCollection('blog');
-const postsMeta = posts
-  .map((p) => ({ id: p.id, ...p.data, image: `${mediaUrl}/blog/thumbnails/${p.id}.avif` }))
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+const posts = await getExternalPosts(12);
 ---
 
-<Layout title="Blog - Pavan Kumar">
-  <div transition:animate="fade">
-    <BlogList posts={postsMeta} client:load />
+<Layout title="Writing - Pavan Kumar">
+  <div class="pt-16">
+    <WritingsPreview posts={posts} />
   </div>
 </Layout>
