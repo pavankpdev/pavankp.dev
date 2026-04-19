@@ -55,7 +55,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     role: "Senior Full Stack Developer",
-    company: "LanceSoft India, Client: Bosch",
+    company: "Bosch",
     duration: "Mar 2024 - Dec 2024",
     impact: [
       "Used Angular, AWS Lambda, and Terraform CDK to support a scalable serverless architecture.",
